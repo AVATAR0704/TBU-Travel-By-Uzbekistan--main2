@@ -10,41 +10,91 @@ import MapKit
 
 struct LocationView: View {
     
+    @AppStorage("signed") var isSigned: Bool = true
+    @AppStorage("name") var nameOfM: String?
+    @AppStorage("age") var ageOfM: Int?
+    @AppStorage("gender") var genderOfM: String?
+    @AppStorage("username") var usernameOfM: String?
+    @AppStorage("password") var passwordOfM: String?
+    
     @EnvironmentObject private var vm: LocationsViewModel
+    
+    
+    @State var profileViewToggle: Bool = false
     
     let widthForIpad: CGFloat = 700
     
     
     var body: some View {
         
-        
-        ZStack {
-           
-            //MAPView
-            mapView
+        NavigationView {
             
-            VStack {
+            ZStack {
+               
+                //MAPView
+                mapView
+                    
                 
-                //Header
-                headersomeView
-                    .frame(maxWidth: widthForIpad)
-                .padding()
+                VStack {
+                    
+                    //Header
+                    headersomeView
+                        .frame(maxWidth: widthForIpad)
+                    .padding()
+                    
+                    Spacer()
+                    
+                    //Preview
+                    previewSV
+                    
+                }
                 
-                Spacer()
                 
-                //Preview
-                previewSV
                 
+                //ortiqch
+                if profileViewToggle {
+                    profileView
+                        
+                }
+                
+                //ortiqcha
+                
+               
+            }
+            .navigationBarItems(trailing:
+              Button(action: {
+                nameOfM = nil
+                ageOfM = nil
+                genderOfM = nil
+                usernameOfM = nil
+                passwordOfM = nil
+                isSigned = false
+                             },
+                             label: {
+                Text("Log out")
+                    .font(.title2)
+                              }))
+            .navigationBarItems(leading:
+                Button(action: {
+                withAnimation {
+                    profileViewToggle.toggle()
+                }
+                              }, label: {
+                Image(systemName: "person.fill")
+                                      .font(.title2)
+                                      .shadow(radius: 20)
+                              }))
+            //.navigationTitle("TTU")
+            .sheet(item: $vm.showDetailViewLocation, onDismiss: {profileViewToggle = false}) { location in
+                LocationDetailView(location: location)
             }
             
-           
-        }
-        .sheet(item: $vm.showDetailViewLocation, onDismiss: nil) { location in
-            LocationDetailView(location: location)
-        }
+        }//NAVVIew
+        
+       
         
         
-    }
+    }//Body
 }
 
 struct LocationView_Previews: PreviewProvider {
@@ -73,6 +123,9 @@ extension LocationView {
                     }
             }
         })
+        .onTapGesture {
+            profileViewToggle = false
+        }
         .ignoresSafeArea()
         
     }
@@ -135,6 +188,24 @@ extension LocationView {
         }
             
      }//Zstack
+     .onTapGesture {
+            profileViewToggle = false
+        }
+        
+    }
+    
+    private var profileView: some View {
+        
+        HStack {
+            
+            ProfileViewO(profileToggle: $profileViewToggle, name: nameOfM ?? "", age: ageOfM ?? 20, gender: genderOfM ?? "", username: usernameOfM ?? "")
+                .frame(width: (UIScreen.main.bounds.width * 2) / 3)
+            
+            Spacer()
+        }
+        .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+        .shadow(radius: 10,x: 20,y: 10)
+        .ignoresSafeArea()
         
     }
     

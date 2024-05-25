@@ -31,15 +31,15 @@ class ViewModelG: ObservableObject {
         users.append(newuser)
     }
     
-    func findingUser(username: String,password: String) -> Bool{
+    func findingUser(username: String,password: String) -> UserG? {
         
         for us in users {
             if us.userName == username && us.password == password {
-                return true
+                return us
             }
                 
         }
-        return false
+        return nil
     }
     
     

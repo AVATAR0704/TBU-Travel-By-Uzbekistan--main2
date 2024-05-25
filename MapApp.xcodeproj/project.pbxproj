@@ -24,6 +24,7 @@
 		7CB43EC92BFDEF840099D248 /* SignInO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB43EC82BFDEF840099D248 /* SignInO.swift */; };
 		7CB43ECB2BFDEFB90099D248 /* UserO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB43ECA2BFDEFB90099D248 /* UserO.swift */; };
 		7CB43ECD2BFDEFE70099D248 /* HomeViewO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB43ECC2BFDEFE70099D248 /* HomeViewO.swift */; };
+		7CB43ECF2BFDF9BC0099D248 /* ProfileViewO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB43ECE2BFDF9BC0099D248 /* ProfileViewO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7CB43EC82BFDEF840099D248 /* SignInO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInO.swift; sourceTree = "<group>"; };
 		7CB43ECA2BFDEFB90099D248 /* UserO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserO.swift; sourceTree = "<group>"; };
 		7CB43ECC2BFDEFE70099D248 /* HomeViewO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewO.swift; sourceTree = "<group>"; };
+		7CB43ECE2BFDF9BC0099D248 /* ProfileViewO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				7CB43ECC2BFDEFE70099D248 /* HomeViewO.swift */,
 				7CB43EC82BFDEF840099D248 /* SignInO.swift */,
 				7CB43EC62BFDEF620099D248 /* OnboardingO.swift */,
+				7CB43ECE2BFDF9BC0099D248 /* ProfileViewO.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				78D95185286608410093593E /* LocationMapAnotationView.swift in Sources */,
 				78F6198328622038001FA8F6 /* LocationData.swift in Sources */,
+				7CB43ECF2BFDF9BC0099D248 /* ProfileViewO.swift in Sources */,
 				7CB43EC92BFDEF840099D248 /* SignInO.swift in Sources */,
 				7CB43EC72BFDEF620099D248 /* OnboardingO.swift in Sources */,
 				78D95187286616240093593E /* LocationDetailView.swift in Sources */,

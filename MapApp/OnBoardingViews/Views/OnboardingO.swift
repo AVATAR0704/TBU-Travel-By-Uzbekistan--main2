@@ -37,7 +37,7 @@ struct OnBoardingViewG: View {
         
         ZStack {
             
-            RadialGradient(colors: [Color("CustomColor"), Color("CustomColor").opacity(0.7)], center: .topLeading, startRadius: 60, endRadius: 500).ignoresSafeArea()
+            RadialGradient(colors: [Color("AccentColor"), Color("AccentColor").opacity(0.7)], center: .topLeading, startRadius: 60, endRadius: 500).ignoresSafeArea()
             
             
             VStack(spacing:20) {
@@ -143,7 +143,7 @@ extension OnBoardingViewG {
             Text("Next")
                 .fontWeight(.bold)
                 .padding()
-                .foregroundColor(Color("CustomColor"))
+                .foregroundColor(Color("AccentColor"))
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
                 .cornerRadius(10)

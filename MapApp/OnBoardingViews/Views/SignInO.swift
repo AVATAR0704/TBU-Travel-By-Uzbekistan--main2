@@ -13,6 +13,9 @@ struct SignInViewG: View {
     
     
     @AppStorage("signed") var isSigned: Bool = false
+    @AppStorage("name") var nameOfM: String?
+    @AppStorage("age") var ageOfM: Int?
+    @AppStorage("gender") var genderOfM: String?
     @AppStorage("username") var usernameOfM: String?
     @AppStorage("password") var passwordOfM: String?
     
@@ -111,7 +114,7 @@ extension SignInViewG {
     }
     
     private var namefullAppLabel: some View {
-        Text("Travel Through UZbekistan")
+        Text("Travel Through Uzbekistan")
             //.font(.largeTitle)
             .foregroundColor(.white)
     }
@@ -162,9 +165,6 @@ extension SignInViewG {
         .sheet(isPresented: $signUptoggle, onDismiss: {
             username = usernameOfM ?? ""
             password = passwordOfM ?? ""
-            print("Ondismiss")
-            print(username,password,usernameOfM,passwordOfM)
-            
         }, content: {
             
               OnBoardingViewG()
@@ -188,12 +188,16 @@ extension SignInViewG {
             return
         }
         
-        guard vm.findingUser(username: username, password: password) else {
+        guard let user = vm.findingUser(username: username, password: password) else {
             alerttitle = "There is no user that have like username or password or You are writing username or password wrong. Please check and try again"
             alerttoggle.toggle()
             return
         }
-        usernameOfM = username
+        
+        nameOfM = user.name
+        ageOfM = user.age
+        genderOfM = user.gender.rawValue
+        usernameOfM = user.userName
         passwordOfM = password
         
         isSigned = true

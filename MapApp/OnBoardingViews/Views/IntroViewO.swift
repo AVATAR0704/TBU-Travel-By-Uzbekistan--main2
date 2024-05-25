@@ -13,15 +13,19 @@ struct IntroViewG: View {
     
     @StateObject var vm: ViewModelG = ViewModelG()
     
+    @StateObject private var vmMain: LocationsViewModel = LocationsViewModel()
+    
     var body: some View {
         
         ZStack {
             
-            RadialGradient(colors: [Color("CustomColor"), Color("CustomColor").opacity(0.7)], center: .topLeading, startRadius: 60, endRadius: 500).ignoresSafeArea()
+            RadialGradient(colors: [Color("AccentColor").opacity(0.7), Color("AccentColor")], center: .topLeading, startRadius: 60, endRadius: 500).ignoresSafeArea()
             
             
             if isSigned {
-                 HomeViewG()
+                 LocationView()
+                    .environmentObject(vmMain)
+                    
             }else {
                  SignInViewG()
             }
