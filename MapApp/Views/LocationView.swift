@@ -132,6 +132,7 @@ extension LocationView {
     
     
     
+    
     private var headersomeView: some View {
 
         VStack(spacing: 0) {
