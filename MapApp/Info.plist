@@ -9,7 +9,7 @@
 		<key>UIImageName</key>
 		<string>logo-launch</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
-		<true/>
+		<false/>
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>

@@ -88,7 +88,7 @@
 				78F6197B286219D1001FA8F6 /* Views */,
 				78F6197C286219E1001FA8F6 /* ViewModuls */,
 				78F61972286219BB001FA8F6 /* Preview Content */,
-				7CB43EBE2BFDED770099D248 /* OnBoardingViews */,
+				7CB43EBE2BFDED770099D248 /* Sign Pages */,
 			);
 			path = MapApp;
 			sourceTree = "<group>";
@@ -137,14 +137,14 @@
 			path = ServerData;
 			sourceTree = "<group>";
 		};
-		7CB43EBE2BFDED770099D248 /* OnBoardingViews */ = {
+		7CB43EBE2BFDED770099D248 /* Sign Pages */ = {
 			isa = PBXGroup;
 			children = (
 				7CB43EBF2BFDED8A0099D248 /* Models */,
 				7CB43EC02BFDED920099D248 /* Views */,
 				7CB43EC12BFDED9B0099D248 /* ViewModels */,
 			);
-			path = OnBoardingViews;
+			path = "Sign Pages";
 			sourceTree = "<group>";
 		};
 		7CB43EBF2BFDED8A0099D248 /* Models */ = {

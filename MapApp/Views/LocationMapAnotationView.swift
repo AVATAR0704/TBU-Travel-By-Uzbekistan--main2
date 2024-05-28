@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LocationMapAnotationView: View {
     
-    let accentColor = Color("AccentColor")
+   // let accentColor = Color("AccentColor")
+    let accentColor = Color.red
     
     let location: Location
     
@@ -20,7 +21,7 @@ struct LocationMapAnotationView: View {
             Image(systemName: "mappin.and.ellipse")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 40, height: 40)
+                .frame(width: 50, height: 50)
                 .foregroundColor(accentColor)
                 .padding(.bottom,40)
             

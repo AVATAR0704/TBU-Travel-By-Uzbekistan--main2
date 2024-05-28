@@ -138,6 +138,24 @@ extension LocationDetailView {
                     .tint(.blue)
                 
             }
+            
+            if let mapurlString = URL(string: location.maplink) {
+            
+                HStack {
+                    Link("Take a rode", destination: mapurlString)
+                            .font(.headline)
+                            .tint(.blue)
+                    
+                    Image(systemName: "car")
+                        .font(.title)
+                        .padding(.trailing,30)
+                        .foregroundColor(.blue)
+                    }
+                    
+                }
+                
+            
+            
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         

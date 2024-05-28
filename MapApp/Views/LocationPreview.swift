@@ -120,7 +120,7 @@ extension LocationPreview {
                 .font(.headline)
                 .frame(width: 130, height: 50)
                 .foregroundColor(.primary)
-                .background(Color("AccentColor").cornerRadius(10))
+                .background(Color.red.cornerRadius(10))
         }
 
     }
