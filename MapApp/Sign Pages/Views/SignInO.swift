@@ -55,10 +55,9 @@ struct SignInViewG: View {
             
             Spacer()
             
-            RoundedRectangle(cornerRadius: 25)
-                .foregroundColor(.white)
-                .frame(height: 1)
-            
+
+            Divider()
+                  .background(Color.white)
             
             HStack {
                 
@@ -83,7 +82,7 @@ struct SignInViewG: View {
 struct SignInViewG_Previews: PreviewProvider {
     static var previews: some View {
         SignInViewG()
-            .background(Color("CustomColor").ignoresSafeArea())
+            .background(Color("AccentColor").ignoresSafeArea())
     }
 }
 
