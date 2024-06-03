@@ -40,7 +40,7 @@ struct ProfileViewO: View {
         
         NavigationView {
             
-          ScrollView {
+            ScrollView(showsIndicators: false) {
             
             VStack {
                 
@@ -102,7 +102,6 @@ struct ProfileViewO: View {
                     Spacer()
                     
                     Button {
-                        print("Pressed")
                         profileToggle.toggle()
                     } label: {
                         Text("Close")
@@ -114,7 +113,6 @@ struct ProfileViewO: View {
                             .cornerRadius(20)
                             .shadow(radius: 10,x: 10,y: 10)
                             .padding()
-                        
                     }
                     
                 }//Vstack

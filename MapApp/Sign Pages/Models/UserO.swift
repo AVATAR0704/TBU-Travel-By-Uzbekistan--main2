@@ -22,10 +22,10 @@ struct UserG {
     
     static var zeroUsers: [UserG] =
     [
-        UserG(name: "User1", age: 20, gender: .male, password: "tester1", userName: "user1"),
-        UserG(name: "User2", age: 20, gender: .male, password: "tester2", userName: "user2"),
-        UserG(name: "User3", age: 20, gender: .male, password: "tester3", userName: "user3"),
-        UserG(name: "User4", age: 20, gender: .male, password: "tester4", userName: "user4"),
-        UserG(name: "User5", age: 20, gender: .male, password: "tester5", userName: "user5")
+        UserG(name: "User1", age: 20, gender: .male, password: "tester1", userName: "User1"),
+        UserG(name: "User2", age: 20, gender: .male, password: "tester2", userName: "User2"),
+        UserG(name: "User3", age: 20, gender: .male, password: "tester3", userName: "User3"),
+        UserG(name: "User4", age: 20, gender: .male, password: "tester4", userName: "User4"),
+        UserG(name: "User5", age: 20, gender: .male, password: "tester5", userName: "User5")
     ]
 }

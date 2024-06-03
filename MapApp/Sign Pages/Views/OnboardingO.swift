@@ -297,12 +297,12 @@ extension OnBoardingViewG {
         Picker(selection: $genderOfUser,
                content: {
                     Text("Male")
-                .foregroundColor(Color("CustomColor"))
+                .foregroundColor(Color("AccentColor"))
                 .fontWeight(.bold)
                 .tag("male")
             
                     Text("Female")
-                .foregroundColor(Color("CustomColor"))
+                .foregroundColor(Color("AccentColor"))
                 .fontWeight(.bold)
                 .tag("female")
                         },

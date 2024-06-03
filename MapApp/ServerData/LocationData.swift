@@ -13,7 +13,8 @@ import MapKit
 class LocationDataService {
     
     static let locations: [Location] = [
-        
+     
+        /*
 //        Location(
 //            name: "Tashkent",
 //            cityName: "Oqtepa Lavash",
@@ -144,6 +145,9 @@ class LocationDataService {
 //            ],
 //            link: "https://en.wikipedia.org/wiki/Bukhara"
 //        ),
+        
+        
+        */
         
         Location(
                 name: "Registan",
